@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4ecd9; /* Beige background */
+            text-align: center;
+        }
+
+        header {
+            background-color: #13498b; /* Chocolate brown header */
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #payment-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color:rgb(0, 89, 255); /* Green payment button */
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Payment Page</h1>
+    </header>
+
+    <main>
+        <div id="payment-form">
+            <label for="Username">USERNAME:</label>
+            <input type="text" id="Username" placeholder="Enter your username" required>
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" placeholder="Enter your card number" required>
+            
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="date" id="expiryDate" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="Enter CVV" required>
+           
+
+            <button onclick="processPayment()">Process Payment</button>
+        </div>
+    </main>
+
+    <script>
+        function processPayment() {
+            // Placeholder for payment processing logic
+            // In a real scenario, you would integrate with a payment gateway here
+
+            // For this example, show a simple alert for payment success
+            alert('Payment successful!');
+
+            // Redirect back to the main page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

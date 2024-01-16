@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri venkateshwara college of engineering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4ecd9; /* Beige background */
+        }
+
+        header {
+            background-color:chocolate; /* Chocolate brown header */
+            color:beige;
+            text-align: center;
+            padding: 1em;
+            background-image:"cropped-SVCE1-scaled-1-1-2048x585.jpg";
+            font-size: medium;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:bisque;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .beverages {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color:chocolate;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        #order-summary {
+            margin-top: 20px;
+        }
+
+        #order-summary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        #order-summary th, #order-summary td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #order-summary th {
+            background-color:burlywood;
+            color: white;
+        }
+
+        #payment-button {
+            background-color: #8b4513; /* Chocolate brown payment button */
+        }
+    </style>
+</head>
+<body background="download.jpg" repeat="no-repeat">
+    
+    <header>
+        <h2><i>Sri venkateshwara college of engineering</i></h2>
+        <h1 >APNA CANTEEN</h1>
+
+    </header>
+
+    <main>
+        
+        <header font-size="30px">bisi tinni kushi eri</header>
+        <div class="menu-item">
+            <img src="b.jpg" alt="Burger Combo" style="width: 100px; height: 100px;">
+            <span>Burger Combo</span>
+            <button onclick="addToCart('Burger Combo', 5.99)">Add to Cart</button>
+        </div>
+        
+        <div class="menu-item">
+            <img src="noodles.jpg" alt="Burger Combo" style="width: 100px; height: 100px;">
+            <span>noodels</span>
+            <button onclick="addToCart('noodles', 10.99)">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="pizza.jpg" alt="Burger Combo" style="width: 100px; height: 100px;">
+            <span>pizza</span>
+            <button onclick="addToCart('pizza', 5.99)">Add to Cart</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="butter.jpg" alt="Burger Combo" style="width: 100px; height: 100px;">
+            <span>butter nan</span>
+            <button onclick="addToCart('butter nan', 5.99)">Add to Cart</button>
+        </div>
+
+
+        <div class="menu-item">
+            <img src="pasta.jpg" alt="Pasta Combo" style="width: 100px; height: 100px;">
+            <span>Pasta Combo</span>
+            <button onclick="addToCart('Pasta Combo', 7.99)">Add to Cart</button>
+        </div>
+        <header>tanda tanda cool cool!</header>
+        <div class="beverages">
+            
+                <img src="data:image/jpeg;base64,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" alt="Pasta Combo" style="width: 100px; height: 100px;">
+                <span>cold coffee</span>
+                <button onclick="addToCart('cold cofee', 5.99)">Add to Cart</button>
+        </div>
+        <div class="beverages">
+                <img src="data:image/jpeg;base64,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" alt="Pasta Combo" style="width: 100px; height: 100px;">
+                <span>mazza</span>
+                <button onclick="addToCart('mazza', 5.99)">Add to Cart</button>
+        
+        </div>
+
+        <div id="order-summary">
+            <h2>Order Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+
+            <p>Total: $<span id="total">0.00</span></p>
+
+            <button id="payment-button" onclick="redirectToPayment()">Proceed to Payment</button>
+        </div>
+    </main>
+
+    <script>
+        let cart = [];
+
+        function addToCart(item, price) {
+            cart.push({ item, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const totalContainer = document.getElementById('total');
+            let total = 0;
+
+            cartItemsContainer.innerHTML = '';
+
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                const itemCell = document.createElement('td');
+                const priceCell = document.createElement('td');
+
+                itemCell.textContent = item.item;
+                priceCell.textContent = `$${item.price.toFixed(2)}`;
+
+                row.appendChild(itemCell);
+                row.appendChild(priceCell);
+
+                cartItemsContainer.appendChild(row);
+
+                total += item.price;
+            });
+
+            totalContainer.textContent = total.toFixed(2);
+        }
+
+        function redirectToPayment() {
+            // Assuming payment.html is the payment page
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>
